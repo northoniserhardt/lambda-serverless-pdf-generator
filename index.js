@@ -33,9 +33,18 @@ exports.handler = async (event) => {
         let page = await browser.newPage();
 
         const requestBody = JSON.parse(event.body);
-        const html = requestBody.html;
 
-        await page.setContent(html);
+        if(requestBody.html) {
+            await page.setContent(requestBody.html);
+        } else if (requestBody.url) {
+            await page.goto(requestBody.url, { waitUntil: 'networkidle0' });
+        } else {
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ message: 'Erro interno do servidor' })
+            };
+        }
+
 
         const pdfBuffer = await page.pdf({
             format: 'A4',
