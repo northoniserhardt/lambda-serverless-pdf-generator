@@ -45,6 +45,7 @@ Rename the files:
 
 ## Workflow
 
-mermaid
+```mermaid
 graph LR
 A((Appsolar)) -- Request --> B[Lambda] -- Save PDF --> C(S3) -- Return PDF URL --> B -- Response --> A
+```
