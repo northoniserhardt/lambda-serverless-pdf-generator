@@ -31,7 +31,7 @@ Agora que temos a aplicação e o Serverless instalados, precisamos informar par
 > Este comando salvará em ~/.aws/credentials nossas credenciais para serem usadas.
 
 Com as credenciais configuradas já é possível fazermos o deploy para produção com o seguinte comando:
-- `sls deploy --stage prod`
+- `serverless deploy --stage prod`
 > O comando fará deploy para produção.
 
 ## Configurações adicionais
