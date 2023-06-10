@@ -41,7 +41,7 @@ exports.handler = async (event) => {
         } else {
             return {
                 statusCode: 500,
-                body: JSON.stringify({ message: 'Erro interno do servidor' })
+                body: JSON.stringify({ message: 'Internal Server Error' })
             };
         }
 
@@ -63,14 +63,14 @@ exports.handler = async (event) => {
         result = s3.getSignedUrl('getObject', {
             Bucket: bucketName,
             Key: s3Params.Key,
-            Expires: 3600 // tempo de expiração da URL em segundos
+            Expires: 3600
         });
 
     } catch (error) {
         console.log(error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Erro interno do servidor' })
+            body: JSON.stringify({ message: 'Internal Server Error' })
         };
     } finally {
         if (browser !== null) {
