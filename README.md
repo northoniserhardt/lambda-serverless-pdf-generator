@@ -27,10 +27,7 @@ A stack para deploy da aplicação já está configurada, mas ainda é necessár
 # Deploy
 
 Agora que temos a aplicação e o Serverless instalados, precisamos informar para o serverless credenciais accessKeyId e secretAccessKey da AWS para conceder a ele a permissão para criar a stack.
-- `serverless config credentials \  
-  --provider aws \  
-  --key 'key_aqui' \  
-  --secret 'secret_key_aqui'`
+- `serverless config credentials --provider aws --key 'key_aqui' --secret 'secret_key_aqui'`
 > Este comando salvará em ~/.aws/credentials nossas credenciais para serem usadas.
 
 Com as credenciais configuradas já é possível fazermos o deploy para produção com o seguinte comando:
