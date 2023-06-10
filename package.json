@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1343.0",
+    "chrome-aws-lambda": "^10.1.0",
+    "dotenv": "^16.0.3",
+    "puppeteer-core": "^10.4.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^12.0.4"
+  }
+}
