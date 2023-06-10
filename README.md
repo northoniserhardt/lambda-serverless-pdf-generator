@@ -42,7 +42,7 @@ Renomeie os arquivos:
 
 ```mermaid
 graph LR
-A((Appsolar)) -- Request --> B[Lambda] -- Salva o PDF --> C(S3) -- Retorna a URL do PDF --> B -- Response --> A
+A((Requester)) -- Request --> B[Lambda] -- Salva o PDF --> C(S3) -- Retorna a URL do PDF --> B -- Response --> A
 ```
 
 ---
