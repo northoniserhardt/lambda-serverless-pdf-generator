@@ -42,7 +42,7 @@ Renomeie os arquivos:
 
 ```mermaid
 graph LR
-A((Requester)) -- Request --> B[Lambda] -- Salva o PDF --> C(S3) -- Retorna a URL do PDF --> B -- Response --> A
+A((Requester)) -- Request --> B[Lambda] -- Salva o PDF --> C(S3) -- Retorna a URL do PDF --> B -- URL Response --> A
 ```
 
 ---
@@ -96,5 +96,5 @@ Rename the files:
 
 ```mermaid
 graph LR
-A((Requester)) -- Request --> B[Lambda] -- Save PDF --> C(S3) -- Return PDF URL --> B -- Response --> A
+A((Requester)) -- Request --> B[Lambda] -- Save PDF --> C(S3) -- Return PDF URL --> B -- URL Response --> A
 ```
