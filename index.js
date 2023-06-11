@@ -67,11 +67,7 @@ exports.handler = async (event) => {
         });
 
     } catch (error) {
-        console.log(error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ message: 'Internal Server Error' })
-        };
+        throw new Error('Internal Server Error');
     } finally {
         if (browser !== null) {
             await browser.close();
