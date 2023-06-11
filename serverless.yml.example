@@ -3,7 +3,7 @@ service: pdf-generator
 provider:
   name: aws
   runtime: nodejs14.x
-  memorySize:
+  memorySize: 1000
   timeout: 30
   region: us-east-1
   iam:
@@ -20,8 +20,6 @@ provider:
             - 's3:PutObject'
           Resource:
             - 'arn:aws:s3:::bucket-name/*'
-  #  accessKeyId:
-  #  secretAccessKey:
 
 functions:
   lambda:
