@@ -38,6 +38,25 @@ Renomeie os arquivos:
 > Nele é necessário configurar as váriaveis de ambiente.
 - serverless.yml.example -> serverless.yml
 > Nele é necessário configurar os serviços que serão levantados na AWS.
+
+## Requisições
+
+Exemplo de como gerar PDF passando o html:
+
+```json
+{
+  "html": "<!DOCTYPE html><html><body><h1>Hello World.</h1></body></html>"
+}
+```
+
+Exemplo de como gerar PDF passando a url:
+
+```json
+{
+"url": "https://github.com"
+}
+```
+
 ## Fluxo de funcionamento
 
 ```mermaid
@@ -91,6 +110,24 @@ Rename the files:
 > In this file, you need to configure the environment variables.
 - serverless.yml.example to serverless.yml
 > In this file, you need to configure the services that will be provisioned on AWS.
+
+## Requests
+
+Example of how to generate a PDF by passing the HTML:
+
+```json
+{
+  "html": "<!DOCTYPE html><html><body><h1>Hello World.</h1></body></html>"
+}
+```
+
+Example of how to generate a PDF by passing the URL:
+
+```json
+{
+"url": "https://github.com"
+}
+```
 
 ## Workflow
 
