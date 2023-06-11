@@ -1,0 +1,36 @@
+service: pdf-generator
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  memorySize:
+  timeout: 30
+  region: us-east-1
+  iam:
+    role:
+      statements:
+        # Allow functions to list all buckets
+        - Effect: Allow
+          Action: 's3:ListBucket'
+          Resource: '*'
+        # Allow functions to read/write objects in a bucket
+        - Effect: Allow
+          Action:
+            - 's3:GetObject'
+            - 's3:PutObject'
+          Resource:
+            - 'arn:aws:s3:::bucket-name/*'
+  #  accessKeyId:
+  #  secretAccessKey:
+
+functions:
+  lambda:
+    name: pdf-generator
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /pdf
+          method: post
+
+plugins:
+  - serverless-offline
