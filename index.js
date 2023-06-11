@@ -80,6 +80,6 @@ exports.handler = async (event) => {
     };
 };
 
-function generateUUID() {
+const generateUUID = () => {
     return crypto.randomBytes(16).toString('hex');
-}
+};
